@@ -221,7 +221,7 @@ CF_RESOURCES=$(cat <<-EOF
 EOF
 )
 
-$CMD -t https://$OPS_MGR_HOST -u $OPS_MGR_USR -p $OPS_MGR_PWD -k configure-product -n cf -p "$CF_PROPERTIES" -pn "$CF_NETWORK" -pr "$CF_RESOURCES"
+$CMD -t https://$OPS_MGR_HOST -u $OPS_MGR_USR -p $OPS_MGR_PWD -k configure-product -n cf -p "$CF_PROPERTIES" #-pn "$CF_NETWORK" -pr "$CF_RESOURCES"
 
 if [[ "$AUTHENTICATION_MODE" == "internal" ]]; then
 echo "Configuring Internal Authentication in ERT..."
